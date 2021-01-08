@@ -141,7 +141,7 @@ const Signup = () => {
                   instead
                 </label>
                 <MDBBtn color="primary" type="submit">
-                  Submit
+                <label className="submit-btn">Submit</label>
                 </MDBBtn>
               </div>
             </Form>

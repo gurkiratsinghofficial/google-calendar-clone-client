@@ -99,6 +99,7 @@ function Events() {
           <Clock />
           {/* Add new event button */}
           <MDBBtn
+          className="new-event-btn"
             floating="true"
             size="lg"
             gradient="aqua"

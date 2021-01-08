@@ -443,6 +443,9 @@ input[type="radio"]:checked:after {
 .btn{
   padding: 0.84rem 1.14rem !important
 }
+.new-event-btn{
+  border-radius: 0 !important;
+}
 @media only screen 
     and (min-device-width: 375px) 
     and (min-device-height: 812px) { 
@@ -450,7 +453,7 @@ input[type="radio"]:checked:after {
       width: 82vw;
     }
     .btn{
-     border-radius: 0 0 27px 0 !important
+     border-radius: 0 0 27px 0 
     }
     .calendar-container {
       display: flex;
@@ -468,5 +471,32 @@ input[type="radio"]:checked:after {
 .modal.show .modal-dialog {
   transform: none;
   width: 71vw !important
+}
+.signup{
+  width: 92vw;
+}
+.personal-details-heading {
+  padding: 0;
+
+}
+.single-product-container {
+  flex-direction: column;
+}
+.single-product-right{
+  width: 100%;
+  padding: 1%;
+}
+.single-product-left {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+.single-product-image{
+  height: auto;
+  width: 68vw;
+}
+.edit-user-submit{
+  width: 88vw;
+  border-radius: 0 !important
 }
 }

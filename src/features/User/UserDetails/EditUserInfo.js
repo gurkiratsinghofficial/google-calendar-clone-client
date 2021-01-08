@@ -61,7 +61,7 @@ function EditUserInfo({ userInfo }) {
                   formik.setFieldValue("profilePhoto", e.target.files[0]);
                 }}
               ></input>
-              <MDBBtn type="submit">Update</MDBBtn>
+              <MDBBtn className="edit-user-submit" type="submit">Update</MDBBtn>
             </Form>
           )}
         </Formik>
