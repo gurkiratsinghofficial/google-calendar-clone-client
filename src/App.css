@@ -447,8 +447,8 @@ input[type="radio"]:checked:after {
   border-radius: 0 !important;
 }
 @media only screen 
-    and (min-device-width: 375px) 
-    and (min-device-height: 812px) { 
+    and (max-device-width: 375px) 
+    and (max-device-height: 812px) { 
     .login{
       width: 82vw;
     }
