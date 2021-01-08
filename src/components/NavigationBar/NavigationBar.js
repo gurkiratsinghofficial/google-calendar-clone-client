@@ -13,7 +13,7 @@ function NavigationBar(props) {
 
   /**function for collapsing navigation bar */
   const toggleCollapse = () => {
-    setIsOpen({ isOpen: !isOpen });
+    setIsOpen(!isOpen);
   };
   return (
     <div>
