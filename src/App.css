@@ -436,3 +436,37 @@ input[type="radio"]:checked:after {
 .time {
   display: flex;
 }
+.submit-btn{
+  display: flex;
+  margin: 0;
+}
+.btn{
+  padding: 0.84rem 1.14rem !important
+}
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) { 
+    .login{
+      width: 82vw;
+    }
+    .btn{
+     border-radius: 0 0 27px 0 !important
+    }
+    .calendar-container {
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  .calendar-div {
+    width: 100vw;
+}
+.navbar-nav{
+  text-align: center;
+}
+.seperator{
+  display: none;
+}
+.modal.show .modal-dialog {
+  transform: none;
+  width: 71vw !important
+}
+}
