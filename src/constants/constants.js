@@ -1,0 +1,27 @@
+/** Strings */
+var constants = {
+  APP_NAME: "Eventify",
+  APP_SLOGAN: "Your daily event manager",
+  SIGN_SUCCESS: "signup success",
+  TITLE_REQUIRED: "Title is required",
+  DESC_REQUIRED: "Description is required",
+  EVENT_DT_REQ: "Event date is required",
+  STIME_REQ: "Start time is required",
+  ETIME_REQ: "End time is required",
+  END_GREAT: "The event end time cannot be set before the start time",
+  EMAIL_REQ: "Email is required",
+  INV_EMAIL: "Invalid email address",
+  PASS_EMPTY: "Password cannot be empty",
+  SHORT_PASS: "Password must be atleat 8 chracters long",
+  FNAME_REQ: "Firstname is required",
+  lNAME_REQ: "Lastname is required",
+  PHONE_REQ: "Phone number is required",
+  PHONE_LENGTH: "Phone number must be of 10 digits",
+  ADDRESS_REQ: "Address is required",
+  GENDER_REQ: "Gender is required",
+  PASS_NOT_MATCH: "passwords does not match",
+  CONFIRM_DELETE: "Are you sure you want to delete this event?",
+  GUEST_LIST_TITLE: "Guest List",
+  GUEST_LIST_INFO: "(Guests can only be added within the organization)",
+};
+export default constants;
