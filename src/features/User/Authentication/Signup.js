@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form } from "formik";
+import { Formik, Form,ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { MDBBtn } from "mdbreact";
 import { useDispatch } from "react-redux";
@@ -54,6 +54,7 @@ const Signup = () => {
                 return this.parent.password === value;
               }
             ),
+            file:Yup.string().required(constants.DP_REQ)
           })}
           // On submit, signup action is called
           onSubmit={async (values) => {
@@ -134,6 +135,7 @@ const Signup = () => {
                   formik.setFieldValue("file", e.target.files[0]);
                 }}
               />
+              <p className="error"><ErrorMessage  name="file"/></p>
               <br />
               <div className="submit-right">
                 <label>

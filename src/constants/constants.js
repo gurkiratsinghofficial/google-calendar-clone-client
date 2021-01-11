@@ -23,5 +23,6 @@ var constants = {
   CONFIRM_DELETE: "Are you sure you want to delete this event?",
   GUEST_LIST_TITLE: "Guest List",
   GUEST_LIST_INFO: "(Guests can only be added within the organization)",
+  DP_REQ:"Select image for profile photo",
 };
 export default constants;
