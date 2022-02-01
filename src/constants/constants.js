@@ -2,7 +2,7 @@
 var constants = {
   APP_NAME: "Eventify",
   APP_SLOGAN: "Your daily event manager",
-  SIGN_SUCCESS: "signup success",
+  SIGN_SUCCESS: "Signup success! Please check your email",
   TITLE_REQUIRED: "Title is required",
   DESC_REQUIRED: "Description is required",
   EVENT_DT_REQ: "Event date is required",

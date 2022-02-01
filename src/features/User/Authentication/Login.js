@@ -68,7 +68,7 @@ const Login = () => {
                   instead
                 </label>
                 <MDBBtn color="primary" type="submit">
-                  <label className="submit-btn">Submit</label>
+                 Submit
                 </MDBBtn>
               </div>
             </Form>

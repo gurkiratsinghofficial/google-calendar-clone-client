@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form,ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { MDBBtn } from "mdbreact";
@@ -9,14 +9,17 @@ import { signupUser } from "../userSlice";
 import { unwrapResult } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import constants from "../../../constants/constants";
+import Loader from "../../../components/loader/Loader";
 
 /**JSX for signup user */
 const Signup = () => {
   const dispatch = useDispatch();
   const history = useHistory();
+  const [loader,setLoader] = useState(false)
 
   return (
-    <div className="signup-container">
+    <>
+    {loader? <Loader/> : <div className="signup-container">
       <div className="signup">
         <h1>Signup</h1>
         {/* Formik form for entering user details */}
@@ -59,6 +62,7 @@ const Signup = () => {
           // On submit, signup action is called
           onSubmit={async (values) => {
             try {
+              setLoader(true)
               const resultAction = await dispatch(signupUser(values));
               const response = unwrapResult(resultAction);
               if (response.success === "false") {
@@ -75,7 +79,9 @@ const Signup = () => {
                 toast.info(constants.SIGN_SUCCESS);
                 history.push("/login");
               }
+              setLoader(false)
             } catch (err) {
+              setLoader(false)
               toast.info(err.message);
             }
           }}
@@ -143,14 +149,15 @@ const Signup = () => {
                   instead
                 </label>
                 <MDBBtn color="primary" type="submit">
-                <label className="submit-btn">Submit</label>
+                Submit
                 </MDBBtn>
               </div>
             </Form>
           )}
         </Formik>
       </div>
-    </div>
+    </div>}
+    </>
   );
 };
 export default Signup;
