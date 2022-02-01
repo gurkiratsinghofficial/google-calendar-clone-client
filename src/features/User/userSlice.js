@@ -10,6 +10,7 @@ const initialState = {
   isLoggedIn: false,
   status: sliceConstants.IDLE,
   error: null,
+  update:false
 };
 
 /**Thunk for signup new user */
@@ -141,6 +142,7 @@ const userSlice = createSlice({
       if (state.user) state.isLoggedIn = true;
     },
     [fetchUser.fulfilled]: (state, action) => {
+      state.update=false
       state.status = sliceConstants.SUCCEEDED;
       state.user = action.payload.user;
       if (state.user) state.isLoggedIn = true;
@@ -149,11 +151,15 @@ const userSlice = createSlice({
       state.status = sliceConstants.SUCCEEDED;
       state.allUserData = action.payload.data;
     },
+    [editUser.fulfilled]: (state, action) => {
+      state.update = true
+    },
   },
 });
 export default userSlice.reducer;
 export const { logout } = userSlice.actions;
 export const selectUser = (state) => state.user.user;
+export const selectUpdate = (state) => state.user.update;
 export const selectAllUserData = (state) => state.user.allUserData;
 export const selectIsLoggedIn = (state) => state.user.isLoggedIn;
 export const selectAdmin = (state) => state.user.admin;

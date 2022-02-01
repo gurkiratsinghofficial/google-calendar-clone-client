@@ -1,18 +1,20 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchUser, selectUser } from "../userSlice";
+import { fetchUser, selectUpdate, selectUser } from "../userSlice";
 import EditUserForm from "./EditUserInfo";
 
 /**JSX for displaying personal details */
 const PersonalDetails = () => {
   const userInfo = useSelector(selectUser);
+  const update = useSelector(selectUpdate);
   const dispatch = useDispatch();
 
   useEffect(() => {
     /**fetch user details on mount */
-    dispatch(fetchUser());
-  }, [dispatch]);
+    if(update)
+      dispatch(fetchUser());
+  }, [update, dispatch]);
   return (
     <>
       <h1 className="personal-details-heading">Personal Information</h1>
