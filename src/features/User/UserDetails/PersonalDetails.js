@@ -12,7 +12,7 @@ const PersonalDetails = () => {
   useEffect(() => {
     /**fetch user details on mount */
     dispatch(fetchUser());
-  }, [userInfo, dispatch]);
+  }, [dispatch]);
   return (
     <>
       <h1 className="personal-details-heading">Personal Information</h1>
